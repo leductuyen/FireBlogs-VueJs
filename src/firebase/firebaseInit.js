@@ -1,5 +1,5 @@
-import firebase from 'firebase/app'
 import 'firebase/firestore'
+import firebase from 'firebase/app'
 
 const firebaseConfig = {
     apiKey: 'AIzaSyByfHaD_yB6wMQuISSBOcvh91KLXOMJEns',
@@ -10,7 +10,8 @@ const firebaseConfig = {
     appId: '1:1044028211644:web:230c2bc438d1b5fdb5ebb9',
 }
 const firebaseApp = firebase.initializeApp(firebaseConfig)
+
 const timestamp = firebase.firestore.FieldValue.serverTimestamp
 
 export { timestamp }
-export default firebaseApp.firestore
+export default firebaseApp.firestore()

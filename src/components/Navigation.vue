@@ -14,13 +14,10 @@
                     <router-link class="link" :to="{ name: 'Blogs' }"
                         >Blogs</router-link
                     >
-                    <router-link
-                        v-if="admin"
-                        class="link"
-                        :to="{ name: 'CreatePost' }"
+                    <router-link class="link" :to="{ name: 'CreatePost' }"
                         >Create Post</router-link
                     >
-                    <router-link v-if="!user" class="link" :to="{ name: 'Login' }"
+                    <router-link class="link" :to="{ name: 'Login' }"
                         >Login/Register</router-link
                     >
                 </ul>
@@ -83,13 +80,10 @@
                 <router-link class="link" :to="{ name: 'Blogs' }"
                     >Blogs</router-link
                 >
-                <router-link
-                    v-if="admin"
-                    class="link"
-                    :to="{ name: 'CreatePost' }"
+                <router-link class="link" :to="{ name: 'CreatePost' }"
                     >Create Post</router-link
                 >
-                <router-link v-if="!user" class="link" :to="{ name: 'Login' }"
+                <router-link class="link" :to="{ name: 'Login' }"
                     >Login/Register</router-link
                 >
             </ul>
