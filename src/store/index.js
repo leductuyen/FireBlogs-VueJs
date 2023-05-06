@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
+        //
         sampleBlogCards: [
             {
                 blogTitle: 'Blog Card #1',
