@@ -68,6 +68,7 @@ export default {
     },
     computed: {
         sampleBlogCards() {
+            console.log(this.$store.state.sampleBlogCards)
             return this.$store.state.sampleBlogCards
         },
         user() {

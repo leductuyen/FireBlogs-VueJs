@@ -1,8 +1,9 @@
+import firebase from 'firebase'
+import 'firebase/auth'
 import Vue from 'vue'
 import Vuex from 'vuex'
-import 'firebase/auth'
-import firebase from 'firebase'
 import db from '../firebase/firebaseInit'
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -41,6 +42,9 @@ export default new Vuex.Store({
         profileInitials: null,
     },
     mutations: {
+        addBlogCard(state, blogCard) {
+            state.sampleBlogCards.push(blogCard)
+        },
         toggleEditPost(state, payload) {
             state.editPost = payload
             console.log(state.editPost)
@@ -54,7 +58,6 @@ export default new Vuex.Store({
             state.profileFirstName = doc.data().firstName
             state.profileLastName = doc.data().lastName
             state.profileUsername = doc.data().username
-            console.log(state.profileId)
         },
         setProfileInitials(state) {
             state.profileInitials =
